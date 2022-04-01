@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8"><title>tolga recep</title>
+    <meta name="description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+            .tab { margin-left: 40px; }
+            body,td,th {
+                font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+            }
+            a.credit:link {
+                color: #000000;
+                text-decoration: none;
+            }
+            a.credit:visited {
+                text-decoration: none;
+                color: #000000;
+            }
+            a.credit:hover {
+                text-decoration: none;
+                color: #FFFFFF;
+                background-color: #000000;
+            }
+            a.credit:active {
+                text-decoration: none;
+                color: #000000;
+            }
+            body {
+                margin-top: 33px;
+            }
+                .tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none;
+            }
+            .list {
+            width:1120px;
+            height:450px;
+            position:fixed;
+            margin-left:-560px;
+            margin-top:-280px;
+            top:50%;
+            left:50%;
+            }
+            img {
+            width:750px;
+            height:300px;
+            }
+        </style>
+    </head>
+    <body>
+    <!--TITLE HERE-->
+    <strong>predictive power of the big five</strong><br>
+    <!--VERSION-->
+    <i>writer's cut</i><br>
+<p>
+<font size="-1">
+<p> </p> <!-- THIS FIXES A BUG -->
+
+<!-- Structure of the essay 
+    abstract,
+    introduction,
+    the essence,
+    relations (able to predict what, data analysis & ml),
+    what lies ahead 
+
+source: psychometrics chapter 1 and 4 and 6 and 8 and some of 9
+search "big five" in pdf, second is quotable
+-->
+<p>
+    <i>“Whatever exists at all exists in some amount, and can therefore be measured.”
+        </i><p>&#8210; William Thomson</p>
+
+<p>As man's expedition with a ruler in his hand continues, he of course tried to measure the psychology. Optimizing psychological
+    assessment is the purpose of psychometrics. Big five is an example to trait theories which is a branch of personality theories, and is among the most popular and
+    industrially influential one. Using a technique called factor analysis, data clustered the focus around these five traits since they're seemingly most informative
+    about one's personality: extraversion, neuroticism, agreeableness, conscientiousness and openness to experience. There is no specific way to measure big-five, ...
+    Check out <a href="https://www.amazon.com/Modern-Psychometrics-Science-Psychological-Assessment/dp/113863865X", target="_blank">Modern Psychometrics</a> if you're
+    interested.
+</p>
+
+<p>
+
+</p>
+
+<p>OCEAN model is generally a latter component in the process. With modeing questionarrie data or digital footprints, people are profiled in this framework and then
+    engagement step begins, (e.g. ad manipulation). We will explore what kind of features of people that big five traits can be informative of. 
+</p>
+
+<p>In this writing, I edited and talked through various findings regarding the case, and soruce for some of the arguments is
+    <a href='https://github.com/tolgarecep/big5' target="_blank">
+    this repo at my GitHub page</a>, where I process, analyse and model on a dataset.</p>
+
+<!--DATA ANALYSIS AND MODELING-->
+<h3>Insights between the traits</h3>
+<p>In the dataset, all subjects with available big five data is from the United States. The most informative relationships in the correlation matrix
+    are three pairs, all of which are negative correlations around -.3
+</p>
+<ol>
+    <li>Neuroticism & Agreeableness</li>
+    <li>Neuroticism & Extraversion</li>
+    <li>Neuroticism & Conscientiousness</li>
+</ol>
+<p>You can find the correlation matrix and more in the notebook.</p>
+<h3>Political orientation</h3>
+<p>The research using the data is about face images exposing political orientation (which I talked about <a href="kosfacepol.html">here</a>),
+    but analysis regarding big-five personality traits are also available in it to
+    compare. Big-five personalities combined can predict political orientation correctly 66% of the time (which is also what I got in the notebook), and
+    face recognition algorithm reaches to 73% accuracy.
+</p>
+<p>Political distribution is skewed towards liberals in the dataset. Most discriminating personal trait turns out to be openness; subjects who scored higher at opennes tend to
+    be liberal. Distributions for classes of political orientation are very close to each other for other personality traits.
+</p>
+<p>"Since
+    Openness to Experience is associated with positive responses to novel
+    stimuli . . . researchers posit that individuals high in this trait are more likely
+    to respond favorably to liberal social policies, which often involve
+    acceptance of unconventional behaviors, and liberal economic policies, which may involve a willingness to support proposals that entail new
+    government involvement in the economy." (Gerber et al., 2011, p. 269)
+    </p>
+<p>The quick model I trained in the notebook reached to an AUC score of 66%, just as it is in the article (although I'm not sure if we had same preprocessing
+    strategies, I kept it very simple.)
+</p>
+<h3>Gender</h3>  
+<p>Gender is distribution is also skewed, subjects in the dataset are mostly males. It's harder to look at a distribution of a trait and guess the
+    gender class it belongs, but
+    we can observe that more neurotic people tend to be males.
+</p>
+<p>Logistic regression scored 63% at average -average of  when guessing gender from personality traits.</p>
+<h3>Age</h3>
+<p>Subjects are mostly young such that values bigger than 50 are considered outliers.</p>
+<p>Young tend to be liberal.</p>
+<p>Ridge regression with a little tuning of alpha parameter scored 9 RMSE.</p>
+
+
+<!--WRITTEN BY-->
+<p><b>tolga recep uçar</b><br>
+2022
+</p>
+
+</font>
+</p>
+</body>
+</html>

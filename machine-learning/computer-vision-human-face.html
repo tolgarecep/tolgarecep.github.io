@@ -1,0 +1,95 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8"><title>tolga recep</title>
+    <meta name="description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+            .tab { margin-left: 40px; }
+            body,td,th {
+                font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+            }
+            a.credit:link {
+                color: #000000;
+                text-decoration: none;
+            }
+            a.credit:visited {
+                text-decoration: none;
+                color: #000000;
+            }
+            a.credit:hover {
+                text-decoration: none;
+                color: #FFFFFF;
+                background-color: #000000;
+            }
+            a.credit:active {
+                text-decoration: none;
+                color: #000000;
+            }
+            body {
+                margin-top: 33px;
+            }
+                .tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none;
+            }
+            .list {
+            width:1120px;
+            height:450px;
+            position:fixed;
+            margin-left:-560px;
+            margin-top:-280px;
+            top:50%;
+            left:50%;
+            }
+        </style>
+    </head>
+    <body>
+    <!--TITLE HERE-->
+    <strong>computer vision and human faces, part 1</strong><br>
+    <!--VERSION-->
+    <i>writer's cut</i><br>
+<p>
+<font size="-1">
+<!--QUOTATION-->
+<p>
+<i>"ALL men by nature desire to know. An indication of this is the delight we take in our senses; for even apart from their usefulness they are loved for
+    themselves; and above all others the sense of sight. For not only with a view to action, but even when we are not going to do anything, we prefer seeing
+    (one might say) to everything else. The reason is that this, most of all the senses, makes us know and brings to light many differences between things."</p>
+</i><p>&#8210; Aristo</p>
+
+<!--ESSAY-->
+<p>At the begninning of this series, we'll talk about how CNNs opened the door towards understanding visual knowledge, and continue to discuss how to 
+    enable machine learning to use visual knowledge it better than humans. While doing that, our main focus will be human face. Many artists saw a lot when
+    they looked at human face, we'll dive even deeper and see what traces are hidden in human face and what kind of traits of its possessor it can unveil.</p>
+<p>I tried to capture the status quo of computer vision here, and my focus is to talk about where innovation happens/can happen as soon as possible, so this
+    may not be suitable for a beginner. Best use of this series, in its writer's cut form, is to start reading and each time you got lost visiting a better
+    explanation of the topic, then coming back to this companion for the road towards current computer vision problems. But why this also looks like a
+    course on topics? It is because I think innovation's key is under first principles.</p>
+
+<h3>Part 1: Machine learning, with visual data</h3> 
+<p>It is not quite convenient to visualize a convolutional neural network architecture as it is while visualizing a dense neural network, so here's a
+    simple image classification architecture in which you can observe a CNN and DNN.</p>
+<p>What a dense neural network does is this in somewhat mathematical terms: apply linear transformations and then a non-linear function to a matrix,
+    that'll create a new matrix, apply same kind of transformations if your architecture wishes, and so on. Transformed matrices are not different than
+    the input in terms of that it still captures "features", but this time in a more useful way. Let me explain that with the help of this deep learning
+    visualizer available at playground.Tensorflow.org:</p>
+<p>As the optimizer works, all these tranformations transform our input features to features that are more informative of the classes samples belong. x1
+    is a sample's y axis coordinate and x2 is x. These Euclidean coordinates are seemingly irrelevant with the classes. When the learning begins, data (X)
+    finally meets the labels (y), and all these transformations are tuned in a way (the way of gradient descent, downwards along the cost functions) that
+    final tranformation, activation function's output is closer to the ground truth and so that decision function (probability |--> class) is more
+    accurate.</p> 
+<p>In CNNs, this search for "right" features is the core goal too. This time features have different attributes, such as that they're spatially
+    hierarchicall and translation invariant.</p>
+<p><b>Translation invariant means that CNN is able to recognize patterns it regardless of the location it is extracted. This is due to the convolution operation done at each
+    convolution layer. The convolution layer partitions the input feature map into 3x3 patches (which is a hyper-parameter) and then applies a dot product with a kernel you tune,
+    then these transformed patches create the output feature map. Imagine 'translation' here as movement of a geometric image on plane; no rotation or reflection, just shifting. 
+</b></p>
+
+<!--WRITTEN BY-->
+<p><b>tolga recep uçar</b><br>
+2022
+</p>
+
+</font>
+</p>
+</body>
+</html>
