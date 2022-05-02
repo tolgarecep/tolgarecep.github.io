@@ -53,8 +53,11 @@
     ">
 
 <h3>interpretability</h3>
-<p>According to a convenient (but I'm not sure if the consensus) taxonomy, DeepTune framework falls under the category of post-hoc, dataset-level interpretation of machine learning
-    models. The main intuition
+<p>According to a convenient (but I'm not sure if the consensus) taxonomy, DeepTune framework falls under the category of post-hoc, dataset-level
+    interpretation of machine learning models. It is post-hoc analysis because the learned weights or the structure of the model is fixed, and is dataset-level
+    because it focuses on global relationships the model has learned (hence the category is referred to as global interpretation). Other category
+    for the post-hoc interpretation is prediction-level (local) interpretations which deal with how individual predictions are made. These two have much
+    in common and global interpretation methods often yield local insights. The main intuition
     behind the method is to optimize the input of a network to maximize the response of a neural network model, which represents a brain cell. The known approach of optimizing with
     alternative loss functions to interpret hidden layers and units of neural network models was published by Google at
     <a href="https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">Inceptionism</a>, and a broader examinition is available at
