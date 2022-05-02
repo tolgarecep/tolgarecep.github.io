@@ -1,0 +1,88 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8"><title>tolga recep</title>
+    <meta name="description">
+    <style type="text/css">
+            .tab { margin-left: 40px; }
+            body,td,th {font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;}
+            
+            body {
+                margin-top: 33px;
+            }
+            .list {
+            width:1120px;
+            height:450px;
+            position:fixed;
+            margin-left:-560px;
+            margin-top:-280px;
+            top:50%;
+            left:50%;
+            }
+        </style>
+    </head>
+    <body>
+    <strong>interpreting neuroscientific models</strong><br>
+    <div style="font-size: smaller;"><i>2022</i><br></div>
+<p>
+<font size="-1"><p></p>
+<p>Computational neuroscience utilizes different ways of modeling in order to make sense of the significances of specific neurons and fundamental mechanics of our brains.
+    Effective machine learning algorithms have been used to predict neuron responses at visual cortex areas. The sense that a network somehow represents a single neuron's activity
+    has lead researches to interpret the models, which is a hard task given the complexity of efficient computer vision models. Significance of the research I'm introducing you to
+    today is the DeepTune framework, which '<i>provide[s] rich, concrete and naturalistic characterizations of V4 neurons that refine significantly findings of previous studies.</i>'
+    The process is to simply visualize by optimization (optimizing input image for maximal network output), once neuroscientific demands are all settled.</p>
+
+<h3>computational neuroscience</h3>
+<p>Analyzing and modeling neural responses (firing rates) is a major headline researched under the domain. These models aim to characterize tuning properties of neurons, which are at
+    visual cortex area V4 in our case. Neuronal tuning refers to the hypothesized property of brain cells by which they selectively
+    represent a particular type of sensory, association, motor, or cognitive information.* '<i>V4 is believed to be crucial for visual object recognition and visual attention, but its functional role remains mysterious. Computational studies
+    of primary visual cortex have produced powerful quantitative models of V1 [5]. Contrastingly, area V4 is more difficult to model computationally than V1. This is mainly due to 
+    its highly nonlinear response [42] and diverse tuning properties [30].</i>'</p>
+
+<h3>cnn-based models</h3>
+<p>DeepTune framework leverages transfer learning in earlier stage of the process at which features are extracted with a pre-trained convolutional base (trained to classify ImageNet)
+    and then fed into a regression model that learns to model neuron spike count recordings from input images shown to the macaque as stimuli for the neurons at V4. More specifically,
+    71 neurons from V4 are isolated and observed during the research, and training set consists of thousands of grayscale images. For stability of the interpretation, 18 different models,
+    combinations of 3 networks (AlexNet, GoogleNet, VGG), 3 layers and 2 regression models (Lasso and Ridge), are trained and then visualized to develop a DeepTune image for a
+    single neuron. Results to ensure high predictive accuracy of the models are included in the paper, which are also '<i>a large improvement in prediction performance over previous
+    works with natural image stimuli similar to ours [8, 46].</i>'</p>
+
+
+    <img src="./imgs/deeptune-cnn.jpg" alt="" style="  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    ">
+
+<h3>interpretability</h3>
+<p>According to a convenient (but I'm not sure if the consensus) taxonomy, DeepTune framework falls under the category of post-hoc, dataset-level interpretation of machine learning
+    models. The main intuition
+    behind the method is to optimize the input of a network to maximize the response of a neural network model, which represents a brain cell. The known approach of optimizing with
+    alternative loss functions to interpret hidden layers and units of neural network models was published by Google at
+    <a href="https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">Inceptionism</a>, and a broader examinition is available at
+    <a href="https://distill.pub/2017/feature-visualization/">Distill - Feature Visualization</a>. Since the purpose is to interpret the neuron, which is represented by the model; the
+    model's output, that is the neuron's output, is maximized and it is done by minimizing:</p>
+
+    <img src="./imgs/deeptune-objective.jpg" alt="" style="  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    ">
+
+<p>
+    '<i>The regularization terms are included to capture prior information about natural images.</i>' They maintain a smooth and naturalistic resulting image. The gradients of the loss
+    function then applied to the random input and the gradient ascent algorithm synthesizes a maximal activation image from this random input. DeepTune images point out the diversity
+    of tuning properties of these 71 neurons:
+</p>
+<img src="./imgs/tunings.jpg" alt=""style="  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+">
+
+<p>Sources <br>
+    <a href="https://www.biorxiv.org/content/10.1101/465534v1.full.pdf">https://www.biorxiv.org/content/10.1101/465534v1.full.pdf</a>
+    <br>
+    *<a href="//en.wikipedia.org/wiki/Neuronal_tuning">https://en.wikipedia.org/wiki/Neuronal_tuning</a></p>
+</font>
+</p>
+</body>
+</html>
