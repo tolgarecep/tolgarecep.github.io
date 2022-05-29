@@ -1,0 +1,70 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8"><title>tolga recep</title>
+    <meta name="description">
+    <style type="text/css">
+            .tab { margin-left: 40px; }
+            body,td,th {font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;}
+            
+            body {
+                margin-top: 33px;
+            }
+            .list {
+            width:1120px;
+            height:450px;
+            position:fixed;
+            margin-left:-560px;
+            margin-top:-280px;
+            top:50%;
+            left:50%;
+            }
+        </style>
+    </head>
+    <body>
+    <strong>integrated gradients (interpreting BERT)</strong><br>
+<p>
+<font size="-1"><p></p>
+<p>Attribution methods attribute the prediction of a deep network to its input features, a model agnostic way of interpreting neural networks. Axiomatic Attribution for Deep Networks
+    proposes two axioms that all attribution methods ought to satisfy, gives examples for previous work that do no satisfy these axioms and design a new method standing on these two
+    axioms.</p>
+<h3>Sensitivity</h3>
+<p>An attribution method satisfies Sensitivity if for every input and baseline that differ in one feature but have different predictions then the differing feature should be given
+    a non-zero attribution. Simply calculating the gradient of the output violates this property (this is analogous to the very basic interpretation of linear regression models,
+    where the derivative w.r.t. a feature is the corresponding weight.) Here's an example: Consider the function below. We increase the only feature
+    by 2 and the prediction changes from 0 to 1. The Sensitivity states that this feature must have a non-zero attribution.</p>
+<img src="./imgs/func.jpg" alt="">
+<img src="./imgs/sensitivity.jpg" alt="">
+<p>As we can observe from the graph of the function, the gradient at x=1 is 0, thus the gradient method's attribution will be 0.</p>
+<p>Why we want attribution methods to satisfy Sensitivity? First of all, it is quite intuitively a desired property, and practically, we want it because 
+    the lack of sensitivity causes gradients to focus on irrelevant features.</p>
+<h3>Implementation Invariance</h3>
+<p>Implementation Invariance states that if two networks are functionally equivalent, no matter how they're implemented, then attributions made by the attribution method
+    must be identical. This gives the method its model agnostic nature. Gradients are very familiarly independent of implementation; the chain rule for gradients, when you think of
+    g and f as the input and output of the network, and h as the implementation, is implementation independent since the gradient of output f to input g can be computed directly. 
+</p>
+<img src="./imgs/chain.jpg" alt="">
+<p>You can check the paper method examples that satisfy one while violating another, and the proposed method Integrated Gradients actually combines the properties of methods that
+    satisfy one of the axioms. It combines the implementation invariance of the gradients and the sensitivity acquired by calculating discrete gradients in methods like LRP or DeepLift.
+</p>
+<p>The integrated gradient along the ith dimension for an input x and baseline x' is defined as follows. It is the path integral along the straightline path from x' to x, scaled by 
+    the difference between two vectors.</p>
+<img src="./imgs/ig.jpg" alt="">
+<p>Then you cumulate these for all dimensions and it is equal to the function's output at the input x minus output at the baseline x'.</p>
+<h3>Example: BERT Question Answering</h3>
+<p>As our inputs while working on question answering with BERT are tokens, we will now attribute values to tokens and try to understand which parts of the input (question - text
+    pair) the model focused on while generating the answer. You can check the implementation details at Captum's tutorial.
+</p>
+<img src="./imgs/pred-bert.jpg" alt="">
+<img src="./imgs/bert.jpg" alt="">
+
+<p>Sources <br>
+    <a href="https://arxiv.org/pdf/1703.01365.pdf">Axiomatic Attribution for Deep Networks</a>
+    <br>
+    <a href="https://captum.ai/tutorials/Bert_SQUAD_Interpret">Captum's Tutorial for Interpreting BERT</a>
+    <p><b>tolga recep uçar</b><br>
+2022
+</p>
+
+</font>
+</p>
+</body>
+</html>
