@@ -3,7 +3,6 @@
 <meta name="description">
 <style type="text/css">
     body { font-family: "Verdana"; margin-top: 33px; }
-    img { width: 450px; heigth 250px; }
 </style>
 </head>
 <body>
@@ -31,8 +30,8 @@
     enchance the activations of certain nodes) applied to VGGFace2-Resnet50 is available <a href="https://github.com/tolgarecep/interpretability" target="_blank">here</a>
     in my repo for neural network interpretability.
 </p> 
-<img src="imgs/base.png" alt="" id="deepdream"> <br>
-<img src="imgs/deepdream.png" alt="" id="deepdream">
+<img src="imgs/base.png" alt="" id="deepdream" style="width:150px; heigth:150px"> <br>
+<img src="imgs/deepdream.png" alt="" id="deepdream" style="width:150px; heigth:150px">
 <p>
     You can find more about
     "feature visualization" here: <a href="https://distill.pub/2017/feature-visualization/"
@@ -54,7 +53,7 @@
     <p>
     Basically, we're dealing with mechanics of a triangle: mind - face - few other factors affecting faces & brains.
 </p><br><br>
-    <img src="./imgs/kosfacepol-psych.jpg" alt="The End of Privacy | Michal Kosinski | Talks at Google">
+    <img src="./imgs/kosfacepol-psych.jpg" alt="The End of Privacy | Michal Kosinski | Talks at Google" style="width:450px; heigth:250px">
     <br><a href="https://www.youtube.com/watch?v=VUwBcTgzbtU">The End of Privacy | Michal Kosinski | Talks at Google</a>
 <p>
     Here are some examples for different cause - effect pairs in the triangle: A cheerful person will develop smile-lines, an introvert is exposed to sun
@@ -77,7 +76,7 @@
     Then these are resized to 224x224 pixels, so now input data for the face recognition algorithm are tensors of shape (224, 224, 3). Face
     recognition algorithm is ResNet-50 pretrained with VGGFace2 dataset.
 </p>
-<img src="./imgs/kosfacepol-ml.jpg" alt="Machine learning pipeline">
+<img src="./imgs/kosfacepol-ml.jpg" alt="Machine learning pipeline" style="width:450px; heigth:250px">
 <p>Face recognition algorithm is purposed to recognize the class face data belongs to, so actual objective of the ResNet-50 algorithm is multiclass
     classification of people. Here, we truncate the last (dense classification) layer and repurpose the algorithm to give facial descriptors that are optimized
     to recognize faces. Features it learned to accomplish that
