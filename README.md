@@ -1,10 +1,14 @@
 # Tolga Recep Ucar's personal webpage
+
+You can view my webpage [here](https://tolgarecep.github.io) which is created using a [Jekyll](https://jekyllrb.com/) theme al-folio but neatly modified by rishabhjoshi, eaplatanio and otiliastr.
+
+---
+
 A simple and clean [Jekyll](https://jekyllrb.com/) theme for academics.
 
 **al-folio** is based on [\*folio theme](https://github.com/bogoli/-folio).
-The original theme was published by [Lia Bogoev](http://liabogoev.com) and copyrighted under the MIT license.
 
-Inspired from rishabhjoshi, eaplatanio and otiliastr.
+The original theme was published by [Lia Bogoev](http://liabogoev.com) and copyrighted under the MIT license.
 
 ## Getting started
 
