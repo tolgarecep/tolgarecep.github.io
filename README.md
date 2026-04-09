@@ -1,10 +1,10 @@
-# Rishabh Joshi's personal webpage
+# Tolga Recep Ucar's personal webpage
 A simple and clean [Jekyll](https://jekyllrb.com/) theme for academics.
 
 **al-folio** is based on [\*folio theme](https://github.com/bogoli/-folio).
 The original theme was published by [Lia Bogoev](http://liabogoev.com) and copyrighted under the MIT license.
 
-Inspired from eaplatanio and otiliastr.
+Inspired from rishabhjoshi, eaplatanio and otiliastr.
 
 ## Getting started
 
