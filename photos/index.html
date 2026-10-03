@@ -38,7 +38,7 @@
           </li>    
               <li class="nav-item ">
                   <a class="nav-link" href="/publications/">
-                    papers   
+                    research   
                   </a>
               </li>
 			
@@ -47,17 +47,10 @@
                     thesis        
                   </a>
               </li>
-
-              <li class="nav-item ">
-                  <a class="nav-link" href="/cv/">
-                    cv    
-					  
-                  </a>
-              </li>
 			
               <li class="nav-item navbar-active font-weight-bold">
-                  <a class="nav-link" href="/gallery/">
-                    gallery        
+                  <a class="nav-link" href="/photos/">
+                    photos        
                   <span class="sr-only">(current)</span>
 </a>
               </li>
@@ -76,9 +69,45 @@
 
   <!-- Content -->
   <div class="content">
+<style>
+    .photo-intro { max-width: 640px; margin-bottom: 2rem; }
+    .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .photo-grid figure { margin: 0; }
+    .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-grid figcaption { font-size: 0.85em; color: #666; margin-top: 6px; }
+    .photo-grid .wide { grid-column: span 2; }
+    .photo-note { max-width: 640px; margin: 2rem 0; }
+    @media (max-width: 600px) { .photo-grid .wide { grid-column: span 1; } }
+  </style>
 
-  <h1>Gallery</h1>
-  <p>Photos coming soon.</p>
+  <h1>Photos</h1>
+
+  <p class="photo-intro">A few words about my photography go here: what I shoot, with what, and why.</p>
+
+  <!--
+    HOW TO ADD PHOTOS
+    1. Put image files in /assets/img/photos/ (JPEG, ~1600px on the long side keeps the page fast).
+    2. Copy a <figure> block below into the grid and change src, alt and the caption.
+       Add class="wide" to a <figure> to make it span two columns.
+    3. Put text between photos by closing the grid, adding a <p class="photo-note">, and opening a new grid.
+
+    <div class="photo-grid">
+      <figure>
+        <img src="/assets/img/photos/example-1.jpg" alt="Short description of the photo" loading="lazy">
+        <figcaption>Place, year</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="/assets/img/photos/example-2.jpg" alt="Short description of the photo" loading="lazy">
+        <figcaption>Place, year</figcaption>
+      </figure>
+    </div>
+
+    <p class="photo-note">Some text between two groups of photos.</p>
+  -->
+
+  <div class="photo-grid">
+    <p>Photos coming soon.</p>
+  </div>
 
 </div>
 
