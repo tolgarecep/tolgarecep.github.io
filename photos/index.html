@@ -77,16 +77,35 @@
     .photo-grid figcaption { font-size: 0.85em; color: #666; margin-top: 6px; }
     .photo-grid .wide { grid-column: span 2; }
     .photo-note { max-width: 640px; margin: 2rem 0; }
+    .photo-feature { margin: 0 0 3rem; }
+    .photo-feature a { display: block; line-height: 0; }
+    .photo-feature img { width: 100%; height: auto; display: block; box-shadow: 0 2px 14px rgba(0,0,0,0.18); background: #0a3f9c; }
+    .photo-feature figcaption { margin-top: 1.1rem; font-style: italic; line-height: 1.7; color: #444; }
+    .photo-feature figcaption em { font-style: normal; }
     @media (max-width: 600px) { .photo-grid .wide { grid-column: span 1; } }
   </style>
 
   <h1>Photos</h1>
 
-  <p class="photo-intro">A few words about my photography go here: what I shoot, with what, and why.</p>
+
+  <figure class="photo-feature">
+    <a href="/assets/img/photos/photo-1-2400.jpg" title="Open full size">
+      <img src="/assets/img/photos/photo-1-1200.jpg"
+           srcset="/assets/img/photos/photo-1-1200.jpg 1200w, /assets/img/photos/photo-1-2400.jpg 2400w"
+           sizes="(min-width: 992px) 900px, 100vw"
+           width="2400" height="1603"
+           alt="A bare tree trunk with a single thin branch, seen from below against a deep blue sky with white clouds and power lines">
+    </a>
+    <figcaption>
+      we handled that <em>too</em> right<br>
+      and now I'm yours<br>
+      forever and always
+    </figcaption>
+  </figure>
 
   <!--
     HOW TO ADD PHOTOS
-    1. Put image files in /assets/img/photos/ (JPEG, ~1600px on the long side keeps the page fast).
+    1. Put image files in /assets/img/photos/ (a 1200px and a 2400px JPEG per photo; see the featured photo above).
     2. Copy a <figure> block below into the grid and change src, alt and the caption.
        Add class="wide" to a <figure> to make it span two columns.
     3. Put text between photos by closing the grid, adding a <p class="photo-note">, and opening a new grid.
@@ -105,9 +124,6 @@
     <p class="photo-note">Some text between two groups of photos.</p>
   -->
 
-  <div class="photo-grid">
-    <p>Photos coming soon.</p>
-  </div>
 
 </div>
 
