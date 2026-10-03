@@ -81,7 +81,7 @@
     .photo-feature a { display: block; line-height: 0; }
     .photo-feature img { width: 100%; height: auto; display: block; box-shadow: 0 2px 14px rgba(0,0,0,0.18); background: #0a3f9c; }
     .photo-feature figcaption { margin-top: 1.1rem; font-style: italic; line-height: 1.7; color: #444; }
-    .photo-feature figcaption em { font-style: normal; }
+    .photo-text { font-style: italic; line-height: 1.7; color: #444; margin: 0 0 3rem; }
     @media (max-width: 600px) { .photo-grid .wide { grid-column: span 1; } }
   </style>
 
@@ -96,32 +96,60 @@
            width="2400" height="1603"
            alt="A bare tree trunk with a single thin branch, seen from below against a deep blue sky with white clouds and power lines">
     </a>
-    <figcaption>
-      we handled that <em>too</em> right<br>
-      and now I'm yours<br>
-      forever and always
-    </figcaption>
   </figure>
 
+  <figure class="photo-feature">
+    <a href="/assets/img/photos/photo-2-2400.jpg" title="Open full size">
+      <img src="/assets/img/photos/photo-2-1200.jpg"
+           srcset="/assets/img/photos/photo-2-1200.jpg 1200w, /assets/img/photos/photo-2-2400.jpg 2400w"
+           sizes="(min-width: 992px) 900px, 100vw"
+           width="2400" height="1603" loading="lazy"
+           alt="Looking up through a red translucent canopy with dark steel ribs, pine trees silhouetted against it">
+    </a>
+  </figure>
+
+  <figure class="photo-feature">
+    <a href="/assets/img/photos/photo-3-2400.jpg" title="Open full size">
+      <img src="/assets/img/photos/photo-3-1200.jpg"
+           srcset="/assets/img/photos/photo-3-1200.jpg 1200w, /assets/img/photos/photo-3-2400.jpg 2400w"
+           sizes="(min-width: 992px) 900px, 100vw"
+           width="2400" height="1603" loading="lazy"
+           alt="Close-up, in black and white, of silver line drawings of faces and spirals on dark canvas">
+    </a>
+  </figure>
+
+  <figure class="photo-feature">
+    <a href="/assets/img/photos/photo-4-2400.jpg" title="Open full size">
+      <img src="/assets/img/photos/photo-4-1200.jpg"
+           srcset="/assets/img/photos/photo-4-1200.jpg 1200w, /assets/img/photos/photo-4-2400.jpg 2400w"
+           sizes="(min-width: 992px) 900px, 100vw"
+           width="2400" height="1603" loading="lazy"
+           alt="A whiteboard in black and white covered in handwritten notes and hand-drawn curves">
+    </a>
+  </figure>
+
+  <figure class="photo-feature">
+    <a href="/assets/img/photos/photo-5-2400.jpg" title="Open full size">
+      <img src="/assets/img/photos/photo-5-1200.jpg"
+           srcset="/assets/img/photos/photo-5-1200.jpg 1200w, /assets/img/photos/photo-5-2400.jpg 2400w"
+           sizes="(min-width: 992px) 900px, 100vw"
+           width="2400" height="1603" loading="lazy"
+           alt="A concrete building under construction beside an orange-framed glass building and an apartment block, with a pine tree in front">
+    </a>
+  </figure>
+
+  <p class="photo-text">
+    we handled that *too* right<br>
+    and now I'm yours<br>
+    forever and always
+  </p>
+
   <!--
-    HOW TO ADD PHOTOS
-    1. Put image files in /assets/img/photos/ (a 1200px and a 2400px JPEG per photo; see the featured photo above).
-    2. Copy a <figure> block below into the grid and change src, alt and the caption.
-       Add class="wide" to a <figure> to make it span two columns.
-    3. Put text between photos by closing the grid, adding a <p class="photo-note">, and opening a new grid.
-
-    <div class="photo-grid">
-      <figure>
-        <img src="/assets/img/photos/example-1.jpg" alt="Short description of the photo" loading="lazy">
-        <figcaption>Place, year</figcaption>
-      </figure>
-      <figure class="wide">
-        <img src="/assets/img/photos/example-2.jpg" alt="Short description of the photo" loading="lazy">
-        <figcaption>Place, year</figcaption>
-      </figure>
-    </div>
-
-    <p class="photo-note">Some text between two groups of photos.</p>
+    HOW TO ADD A PHOTO
+    1. Save a 1200px-wide and a 2400px-wide JPEG in /assets/img/photos/ (photo-6-1200.jpg, photo-6-2400.jpg).
+    2. Copy one <figure class="photo-feature"> block above, change the numbers in src/srcset/href and the alt text.
+       Add a <figcaption>Place, year</figcaption> inside the figure if you want a caption.
+    3. Text goes in a <p class="photo-text"> (italic) or <p class="photo-note"> (plain) between or after the photos.
   -->
 
 
