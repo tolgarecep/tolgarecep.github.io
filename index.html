@@ -74,14 +74,24 @@
 
   <!-- Content -->
   <div class="content">
-  <style>.about-text { max-width: 38em; line-height: 1.75; text-align: left; }</style>
+  <style>
+    .about { display: flex; flex-wrap: wrap; gap: 2rem 3rem; align-items: flex-start; }
+    .about-text { flex: 1 1 22em; max-width: 38em; line-height: 1.75; text-align: left; margin: 0; }
+    .about-photo { flex: 0 0 auto; width: 230px; max-width: 100%; margin: 0; }
+    .about-photo img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 4; object-fit: cover; box-shadow: 0 2px 14px rgba(0,0,0,0.18); }
+  </style>
     
 <div class="col p-0 pt-4 pb-4">
   <h1 class="pb-3 title text-left font-weight-bold">Tolga Recep Ucar</h1>
   
 </div>
 
-<p class="about-text">I am a PhD candidate in mathematics at Gran Sasso Science Institute. I am interested in scientific computing, more specifically in the intersection of numerical linear algebra, PDEs, and machine learning. I find it a bit more exciting to focus on the statistics of physics rather than the statistics of human-generated output.</p>
+<div class="about">
+  <p class="about-text">I am a PhD candidate in mathematics at Gran Sasso Science Institute. I am interested in scientific computing, more specifically in the intersection of numerical linear algebra, PDEs, and machine learning. I find it a bit more exciting to focus on the statistics of physics rather than the statistics of human-generated output.</p>
+  <figure class="about-photo">
+    <img src="/assets/img/about.jpg" width="600" height="800" alt="Portrait of Tolga Recep Ucar in academic regalia, outdoors in front of a brick building">
+  </figure>
+</div>
 
   </div>
 
