@@ -78,7 +78,7 @@
 <style>
     .film-section { font-size: 0.8em; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin: 2rem 0 0; padding-bottom: 0.4rem; border-bottom: 1px solid #ddd; }
     .film-list { list-style: none; margin: 1.5rem 0 3rem; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .film { position: relative; margin: 0; aspect-ratio: 2 / 3; background: #14181c; border-radius: 4px; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08); }
+    .film { position: relative; margin: 0; aspect-ratio: 2 / 3; background: #14181c; border-radius: 6px; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08); }
     .film img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     .film figcaption { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px; color: #fff; line-height: 1.3; background: linear-gradient(to top, rgba(20,24,28,0.92), rgba(20,24,28,0) 55%); opacity: 0; transition: opacity 0.2s; }
     .film:hover figcaption, .film:focus-within figcaption { opacity: 1; }
@@ -89,12 +89,12 @@
     @media (max-width: 600px) { .film-list { grid-template-columns: repeat(2, 1fr); } }
   </style>
 
-  <!-- Posters: save each as /assets/img/films/<slug>.jpg (2:3, about 500x750). Until then the title shows on a dark tile. -->
+  <!-- Posters: save each as a 2:3 JPEG in /assets/img/films/ (about 600x900) and set its src below. Until then the title shows on a dark tile. -->
   <h2 class="film-section">Favorite films</h2>
   <ul class="film-list">
     <li>
       <figure class="film">
-        <img src="/assets/img/films/apocalypse-now.jpg" alt="Poster for Apocalypse Now (1979)" loading="lazy" onerror="this.style.display='none'">
+        <img src="/assets/img/films/apocalypsenow.jpg" alt="Poster for Apocalypse Now (1979)" loading="lazy" onerror="this.style.display='none'">
         <figcaption><span class="film-title">Apocalypse Now</span> <span class="film-year">1979</span></figcaption>
       </figure>
     </li>
@@ -106,13 +106,13 @@
     </li>
     <li>
       <figure class="film">
-        <img src="/assets/img/films/hiroshima-mon-amour.jpg" alt="Poster for Hiroshima Mon Amour (1959)" loading="lazy" onerror="this.style.display='none'">
+        <img src="/assets/img/films/hmamour.jpg" alt="Poster for Hiroshima Mon Amour (1959)" loading="lazy" onerror="this.style.display='none'">
         <figcaption><span class="film-title">Hiroshima Mon Amour</span> <span class="film-year">1959</span></figcaption>
       </figure>
     </li>
     <li>
       <figure class="film">
-        <img src="/assets/img/films/were-all-going-to-the-worlds-fair.jpg" alt="Poster for We're All Going to the World's Fair (2021)" loading="lazy" onerror="this.style.display='none'">
+        <img src="/assets/img/films/worldsfair.jpg" alt="Poster for We're All Going to the World's Fair (2021)" loading="lazy" onerror="this.style.display='none'">
         <figcaption><span class="film-title">We’re All Going to the World’s Fair</span> <span class="film-year">2021</span></figcaption>
       </figure>
     </li>
